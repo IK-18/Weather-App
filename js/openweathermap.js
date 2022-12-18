@@ -138,7 +138,7 @@ const geoResults = async (event) => {
             event.preventDefault();
             invalidCity.style.display = 'none';
             loading();
-            const geo = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=4&appid=${key}`);
+            const geo = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=4&appid=${key}`);
             const location = await geo.json();
             let preview;
             let previewData;
