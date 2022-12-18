@@ -1701,5 +1701,3 @@ standard.addEventListener('click', changeDay);
 metric.addEventListener('click', changeDay);
 
 imperial.addEventListener('click', changeDay);
-
-window.addEventListener('resize', () => location.reload());
