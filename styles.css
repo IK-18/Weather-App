@@ -721,17 +721,17 @@ footer a svg {
 
     .infoCont {
         position: relative;
-        width: calc(20vmax + 2px);
+        width: calc(30vmax + 2px);
         height: calc(8vmin + 2px);
     }
 
     .info {
-        width: calc(20vmax + 2px);
+        width: calc(30vmax + 2px);
         height: calc(8vmin + 2px);
     }
 
     .info input {
-        width: 20vmax;
+        width: 30vmax;
         height: 8vmin;
         font-size: 1.3vmax;
     }
