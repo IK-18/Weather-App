@@ -727,7 +727,7 @@ footer a svg {
 
     .info {
         width: calc(30vmax + 2px);
-        height: calc(8vmin + 2px);
+        height: max-content;
     }
 
     .info input {
@@ -757,6 +757,13 @@ footer a svg {
     .imperialUnits {
         font-size: 1.3vmax;
         font-weight: 550;
+    }
+
+    .searchFlag {
+        aspect-ratio: unset !important;
+        width: 15px !important;
+        height: 10px !important;
+        ;
     }
 
     .weatherDisplay {

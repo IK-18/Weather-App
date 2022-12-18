@@ -138,7 +138,7 @@ const geoResults = async (event) => {
             event.preventDefault();
             invalidCity.style.display = 'none';
             loading();
-            const geo = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=4&appid=${key}`);
+            const geo = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=4&appid=${key}`);
             const location = await geo.json();
             let preview;
             let previewData;
@@ -157,9 +157,9 @@ const geoResults = async (event) => {
                 }
                 let name;
                 if (location[param].state != undefined) {
-                    name = `<span data-lat="${lat}" data-lon="${lon}" class="searchName">${location[param].name}, ${location[param].state}, ${location[param].country} <img src="https://openweathermap.org/images/flags/${location[param].country.toLowerCase()}.png" width="22.5px" height="15px"></span>`;
+                    name = `<span data-lat="${lat}" data-lon="${lon}" class="searchName">${location[param].name}, ${location[param].state}, ${location[param].country} <img class="searchFlag" src="https://openweathermap.org/images/flags/${location[param].country.toLowerCase()}.png" width="22.5px" height="15px"></span>`;
                 } else {
-                    name = `<span data-lat="${lat}" data-lon="${lon}" class="searchName">${location[param].name}, ${location[param].country} <img src="https://openweathermap.org/images/flags/${location[param].country.toLowerCase()}.png" width="22.5px" height="15px"></span>`;
+                    name = `<span data-lat="${lat}" data-lon="${lon}" class="searchName">${location[param].name}, ${location[param].country} <img class="searchFlag" src="https://openweathermap.org/images/flags/${location[param].country.toLowerCase()}.png" width="22.5px" height="15px"></span>`;
                 }
                 temp = `<span data-lat="${lat}" data-lon="${lon}" class="searchTemp Temp">${previewData.main.temp}</span>`;
                 if (standard.disabled) {
