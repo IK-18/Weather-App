@@ -387,7 +387,7 @@ const displayAirPollution = async (object) => {
         member.remove();
     }
 
-    let airPollutionResponse = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${object.coord.lat}&lon=${object.coord.lon}&appid=${key}`);
+    let airPollutionResponse = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${object.coord.lat}&lon=${object.coord.lon}&appid=${key}`);
 
     let xValues = [];
 
