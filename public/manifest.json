@@ -1,0 +1,15 @@
+{
+	"short_name": "Weather4U",
+	"name": "Weather4U",
+	"icons": [
+		{
+			"src": "4052984.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
+}
