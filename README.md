@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Weather Forecast Website with OpenStreetMap Integration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Weather Forecast Website is a web application that provides users with real-time weather information for major cities around the world. It utilizes OpenStreetMap's weather API to fetch and display weather components such as temperature, humidity, wind speed, and precipitation.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+-   Search Functionality: Users can search for specific cities and retrieve current weather information.
+-   Interactive Map: A map interface powered by OpenStreetMap allows users to explore weather patterns and access weather details for different locations.
+-   City Selection: Users can choose from a list of major cities to view weather information.
+-   Weather Components: The website displays temperature, humidity, wind speed, precipitation, and other relevant weather parameters for the selected cities.
+-   Forecast: Users can access a multi-day weather forecast for each selected city.
+-   Customization: Users can personalize their experience by selecting preferred units of measurement (e.g., Celsius or Fahrenheit).
+-   Notifications: Users can subscribe to email or push notifications to receive weather alerts and updates.
+-   Historical Data: Historical weather data for specific cities is available for reference.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-   Front-end: HTML5, CSS3, JavaScript, React.js (or any other suitable front-end framework)
+-   Back-end: Node.js, Express.js (or any other suitable back-end framework)
+-   Database: MongoDB (or any other suitable database technology)
+-   Mapping: OpenStreetMap API
+-   Weather Data: OpenWeatherMap Weather API (or any other suitable weather data provider)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Contributing
 
-### `npm test`
+Contributions to the Weather Forecast Website project are welcome! If you would like to contribute, please follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Fork the repository.
 
-### `npm run build`
+Create a new branch for your feature or bug fix: git checkout -b my-feature
+Make your changes and commit them: git commit -m "Add my feature"
+Push to the branch: git push origin my-feature
+Submit a pull request detailing your changes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Acknowledgements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[OpenStreetMap](https://www.openstreetmap.org/)
+[OpenWeatherMap](https://openweathermap.org/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributors
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project Lead: Osaite Arigbe-Osula [LinkedIn](https://www.linkedin.com/in/osaite-arigbe-osula-6386a6170?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BgdZghNkxR1eQm34nOq347g%3D%3D) [Github](https://github.com/IK-18)
+Feel free to reach out for support, bug reports, or feature requests. We appreciate your feedback!
