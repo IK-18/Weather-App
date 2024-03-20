@@ -4,12 +4,6 @@
   --primary-color-100: rgb(113, 30, 190, 0.5);
 }
 
-/* * {
-    background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;
-} */
-
 * {
   font-family: "Quicksand", "Alegreya", sans-serif, serif;
   box-sizing: content-box !important;
@@ -42,7 +36,9 @@ h1 {
 
 header {
   position: relative;
-  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   z-index: inherit;
   display: flex;
   flex-direction: column;
@@ -57,7 +53,7 @@ header h1 {
   margin: 0;
   color: rgb(211, 170, 250);
   text-align: center;
-  font-size: 2.5vmax;
+  font-size: 8vh;
 }
 
 header p {
@@ -1175,6 +1171,10 @@ html {
   margin-top: 1rem;
 }
 
+.\!box-border {
+  box-sizing: border-box !important;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1253,6 +1253,10 @@ html {
 
 .h-\[720px\] {
   height: 720px;
+}
+
+.h-\[8vh\] {
+  height: 8vh;
 }
 
 .h-full {
@@ -1390,6 +1394,10 @@ html {
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -1404,6 +1412,10 @@ html {
 
 .gap-\[10\%\] {
   gap: 10%;
+}
+
+.gap-\[10px\] {
+  gap: 10px;
 }
 
 .gap-\[12px\] {
@@ -1452,6 +1464,10 @@ html {
 
 .rounded-\[32px\] {
   border-radius: 32px;
+}
+
+.rounded-\[70px\] {
+  border-radius: 70px;
 }
 
 .rounded-\[895\.45px\/763\.03px\] {
@@ -1505,6 +1521,14 @@ html {
   background-color: rgb(246 222 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[var\(--primary-color-200\)\] {
+  background-color: var(--primary-color-200);
+}
+
+.bg-\[var\(--primary-color-300\)\] {
+  background-color: var(--primary-color-300);
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -1518,9 +1542,24 @@ html {
   padding-right: 1%;
 }
 
+.px-\[2\.5rem\] {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .px-\[5\%\] {
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.py-\[1\.25rem\] {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .pt-\[1\.5\%\] {
@@ -1545,6 +1584,10 @@ html {
 
 .text-\[length\:var\(--body2-desktop-font-size\)\] {
   font-size: var(--body2-desktop-font-size);
+}
+
+.text-\[length\:var\(--buttontext-desktop-font-size\)\] {
+  font-size: var(--buttontext-desktop-font-size);
 }
 
 .text-\[length\:var\(--h1-desktop-font-size\)\] {
@@ -1573,6 +1616,10 @@ html {
 
 .font-\[number\:var\(--body2-desktop-font-weight\)\] {
   font-weight: var(--body2-desktop-font-weight);
+}
+
+.font-\[number\:var\(--buttontext-desktop-font-weight\)\] {
+  font-weight: var(--buttontext-desktop-font-weight);
 }
 
 .font-\[number\:var\(--h1-desktop-font-weight\)\] {
@@ -1619,6 +1666,10 @@ html {
   line-height: var(--body2-desktop-line-height);
 }
 
+.leading-\[var\(--buttontext-desktop-line-height\)\] {
+  line-height: var(--buttontext-desktop-line-height);
+}
+
 .leading-\[var\(--h1-desktop-line-height\)\] {
   line-height: var(--h1-desktop-line-height);
 }
@@ -1649,6 +1700,10 @@ html {
 
 .tracking-\[var\(--body2-desktop-letter-spacing\)\] {
   letter-spacing: var(--body2-desktop-letter-spacing);
+}
+
+.tracking-\[var\(--buttontext-desktop-letter-spacing\)\] {
+  letter-spacing: var(--buttontext-desktop-letter-spacing);
 }
 
 .tracking-\[var\(--h1-desktop-letter-spacing\)\] {
@@ -1737,6 +1792,12 @@ html {
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .no-scrollbar::-webkit-scrollbar {
   background-color: transparent;
   width: 0.5vw;
@@ -1779,6 +1840,10 @@ html {
   font-style: var(--body2-desktop-font-style);
 }
 
+.\[font-style\:var\(--buttontext-desktop-font-style\)\] {
+  font-style: var(--buttontext-desktop-font-style);
+}
+
 .\[font-style\:var\(--h1-desktop-font-style\)\] {
   font-style: var(--h1-desktop-font-style);
 }
@@ -1805,4 +1870,18 @@ html {
 
 .\*\:font-bold > * {
   font-weight: 700;
+}
+
+.hover\:bg-\[var\(--primary-color-200\)\]:hover {
+  background-color: var(--primary-color-200);
+}
+
+.hover\:bg-\[var\(--primary-color-300\)\]:hover {
+  background-color: var(--primary-color-300);
+}
+
+.hover\:shadow:hover {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }

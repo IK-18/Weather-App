@@ -4,12 +4,6 @@
 	--primary-color-100: rgb(113, 30, 190, 0.5);
 }
 
-/* * {
-    background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;
-} */
-
 * {
 	font-family: "Quicksand", "Alegreya", sans-serif, serif;
 	box-sizing: content-box !important;
@@ -41,7 +35,7 @@ h1 {
 
 header {
 	position: relative;
-	height: 100%;
+	height: fit-content;
 	z-index: inherit;
 	display: flex;
 	flex-direction: column;
@@ -56,7 +50,7 @@ header h1 {
 	margin: 0;
 	color: rgb(211, 170, 250);
 	text-align: center;
-	font-size: 2.5vmax;
+	font-size: 8vh;
 }
 
 header p {

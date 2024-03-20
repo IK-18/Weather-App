@@ -1,8 +1,7 @@
 import React from "react";
-import {ReactComponent as Logo} from "../assets/svg/logo.svg";
-import carousel1 from "../assets/images/images (1).jpeg";
-import carousel2 from "../assets/images/images (4).jpeg";
-import carousel3 from "../assets/images/images (5).jpeg";
+import carousel1 from "../assets/images/carousel-1.jpg";
+import carousel2 from "../assets/images/carousel-2.jpg";
+import carousel3 from "../assets/images/carousel-3.jpg";
 import bus from "../assets/images/bus.jpg";
 import pos from "../assets/images/pos.jpg";
 import {CCarousel, CCarouselItem, CImage} from "@coreui/react";
@@ -11,10 +10,6 @@ import {ReactComponent as Swift} from "../assets/svg/swift.svg";
 import {ReactComponent as Secure} from "../assets/svg/secure.svg";
 import {ReactComponent as Authentic} from "../assets/svg/authentic.svg";
 import {ReactComponent as BackG} from "../assets/svg/Group 584.svg";
-import {ReactComponent as Mobile} from "../assets/svg/teenyicons_mobile-outline.svg";
-import {ReactComponent as FB} from "../assets/svg/ic_baseline-facebook.svg";
-import {ReactComponent as IG} from "../assets/svg/ri_instagram-fill.svg";
-import {ReactComponent as TW} from "../assets/svg/bi_twitter.svg";
 import Navbar from "../components/Navbar";
 import "../styles/carousel.sass";
 import Footer from "../components/Footer";
@@ -22,10 +17,10 @@ import {Link} from "react-router-dom";
 
 const LandingPage = () => {
 	return (
-		<div className='z-10'>
+		<div className='z-10 no-scrollbar'>
 			<div className='relative flex h-full w-full flex-col justify-center bg-[#f6deff]'>
-				<div className='absolute right-0 top-[-13%] z-0 h-full w-full'>
-					<div className='relative right-0 top-0 h-[2449px] w-[1836px]'>
+				<div className='absolute right-0 overflow-hidden top-[-13%] z-0 h-full w-full'>
+					<div className='relative right-0 overflow-hidden top-0 h-[2449px] w-[1836px]'>
 						<div className='absolute right-0 top-[528px] inline-flex items-start'>
 							<div className='relative mb-[-1.24px] ml-[-1.24px] mt-[-1.24px] h-[242.48px] w-[242.48px] rounded-[26.48px] border-[2.48px] border-solid border-[#f0f0f0]' />
 							<div className='relative mb-[-1.24px] mt-[-1.24px] h-[242.48px] w-[242.48px] rounded-[26.48px] border-[2.48px] border-solid border-[#f0f0f0]' />
@@ -108,6 +103,14 @@ const LandingPage = () => {
 									</span>
 								</p>
 							</div>
+							<Link
+								to='/weather'
+								className='inline-flex text-white items-center justify-center gap-[10px] rounded-[70px] bg-[var(--primary-color-200)] px-[2.5rem] py-[1.25rem] no-underline transition-all hover:bg-[var(--primary-color-300)] hover:shadow'
+							>
+								<div className='font-buttontext-desktop relative w-fit whitespace-nowrap text-[length:var(--buttontext-desktop-font-size)] font-[number:var(--buttontext-desktop-font-weight)] leading-[var(--buttontext-desktop-line-height)] tracking-[var(--buttontext-desktop-letter-spacing)] [font-style:var(--buttontext-desktop-font-style)]'>
+									Check it out!
+								</div>
+							</Link>
 						</div>
 					</div>
 					<div className='my-[15%] flex w-full flex-col items-center justify-between'>
@@ -123,9 +126,17 @@ const LandingPage = () => {
 									make informed decisions based on the current
 									weather conditions.
 								</p>
+								<Link
+									to='/weather'
+									className='inline-flex text-white items-center justify-center gap-[10px] rounded-[70px] bg-[var(--primary-color-200)] px-[2.5rem] py-[1.25rem] no-underline transition-all hover:bg-[var(--primary-color-300)] hover:shadow'
+								>
+									<div className='font-buttontext-desktop relative w-fit whitespace-nowrap text-[length:var(--buttontext-desktop-font-size)] font-[number:var(--buttontext-desktop-font-weight)] leading-[var(--buttontext-desktop-line-height)] tracking-[var(--buttontext-desktop-letter-spacing)] [font-style:var(--buttontext-desktop-font-style)]'>
+										Check it out!
+									</div>
+								</Link>
 							</div>
 							<CCarousel
-								className='h-[60vh] w-[60vh] rounded-[20px] bg-cover bg-[50%_50%] shadow-[0px_4px_200px_#0000001a]'
+								className='h-[60vh] w-[60vh] bg-cover rounded-[20px] shadow-[0px_4px_200px_#0000001a]'
 								indicators
 								transition='crossfade'
 								interval={3000}
@@ -133,7 +144,7 @@ const LandingPage = () => {
 								<CCarouselItem>
 									<CImage
 										src={carousel1}
-										className='aspect-square h-full w-full overflow-hidden rounded-[20px] bg-[50%_50%]'
+										className='aspect-square h-full w-full bg-[50%_50%] overflow-hidden rounded-[20px]'
 									/>
 								</CCarouselItem>
 								<CCarouselItem>
@@ -167,6 +178,14 @@ const LandingPage = () => {
 									plan events, trips, and activities well in
 									advance.
 								</p>
+								<Link
+									to='/weather'
+									className='inline-flex text-white items-center justify-center gap-[10px] rounded-[70px] bg-[var(--primary-color-200)] px-[2.5rem] py-[1.25rem] no-underline transition-all hover:bg-[var(--primary-color-300)] hover:shadow'
+								>
+									<div className='font-buttontext-desktop relative w-fit whitespace-nowrap text-[length:var(--buttontext-desktop-font-size)] font-[number:var(--buttontext-desktop-font-weight)] leading-[var(--buttontext-desktop-line-height)] tracking-[var(--buttontext-desktop-letter-spacing)] [font-style:var(--buttontext-desktop-font-style)]'>
+										Check it out!
+									</div>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -175,7 +194,7 @@ const LandingPage = () => {
 							<div className='mb-[7.5%] flex flex-col items-start gap-[10%]'>
 								<div className='mb-[5%] inline-flex flex-col items-start gap-[15px]'>
 									<div className='font-h2-desktop text-variable-collection-secondary relative mt-[-1.00px] w-[402px] text-[length:var(--h2-desktop-font-size)] font-[number:var(--h2-desktop-font-weight)] leading-[var(--h2-desktop-line-height)] tracking-[var(--h2-desktop-letter-spacing)] [font-style:var(--h2-desktop-font-style)]'>
-										Why Choose Weather4U ?
+										Why Use Weather4U ?
 									</div>
 								</div>
 								<img
@@ -275,13 +294,20 @@ const LandingPage = () => {
 								</p>
 								<div className='flex flex-col items-start gap-[32px]'>
 									<p className='font-body1-desktop relative mt-[-1.00px] w-[483px] text-[length:var(--body1-desktop-font-size)] font-[number:var(--body1-desktop-font-weight)] leading-[var(--body1-desktop-line-height)] tracking-[var(--body1-desktop-letter-spacing)] text-white [font-style:var(--body1-desktop-font-style)]'>
-										Begin your weather exploration journey
-										by searching for your preferred city or
-										browsing through our extensive list of
-										major cities, empowering you to get
+										Start your weather journey by searching
+										or browsing through our extensive list
+										of major cities, empowering you with
 										instant and comprehensive weather
-										details for any location of your choice.
+										details for any location you choose.
 									</p>
+									<Link
+										to='/weather'
+										className='inline-flex text-white items-center justify-center gap-[10px] rounded-[70px] bg-[var(--primary-color-300)] px-[2.5rem] py-[1.25rem] no-underline transition-all hover:bg-[var(--primary-color-200)] hover:shadow'
+									>
+										<div className='font-buttontext-desktop relative w-fit whitespace-nowrap text-[length:var(--buttontext-desktop-font-size)] font-[number:var(--buttontext-desktop-font-weight)] leading-[var(--buttontext-desktop-line-height)] tracking-[var(--buttontext-desktop-letter-spacing)] [font-style:var(--buttontext-desktop-font-style)]'>
+											Check it out!
+										</div>
+									</Link>
 								</div>
 							</div>
 						</div>

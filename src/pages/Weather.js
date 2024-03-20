@@ -6,6 +6,8 @@ import DayChart from "../components/DayChart";
 import needle from "../assets/images/—Pngtree—compass needle_5409072.png";
 import Gradient from "../js/Gradient";
 import Footer from "../components/Footer";
+import {Link} from "react-router-dom";
+import Logo from "../assets/images/4052984.png";
 
 const Weather = () => {
 	let [chartData, setChartData] = useState();
@@ -1392,7 +1394,7 @@ const Weather = () => {
 		cover.current.style.width = standard.current.offsetWidth + "px";
 	}, []);
 	return (
-		<div className='no-scrollbar'>
+		<div>
 			<div className='headerCont'>
 				<header>
 					<canvas
@@ -1400,7 +1402,17 @@ const Weather = () => {
 						data-js-darken-top
 						data-transition-in
 					></canvas>
-					<h1>Weather Forecast App</h1>
+					<h1>
+						<Link
+							to='/'
+							className='inline-flex items-center gap-[15px] no-underline'
+						>
+							<img className='h-[8vh]' src={Logo} alt='Logo' />
+							<h1 className='relative w-fit text-center font-bold leading-[normal] tracking-[0] text-[5vh]'>
+								Weather4U
+							</h1>
+						</Link>
+					</h1>
 					<p>Built with React and TailwindCSS</p>
 				</header>
 			</div>
@@ -1423,7 +1435,7 @@ const Weather = () => {
 					<button
 						ref={search}
 						onClick={geoResults}
-						className='searchButton'
+						className='searchButton px-1'
 					>
 						Search
 					</button>
