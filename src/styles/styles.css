@@ -231,7 +231,7 @@ main {
 }
 
 .list-item {
-	display: flex;
+	display: flex !important;
 	justify-content: space-between;
 	font-size: 1vmax;
 	align-items: center;
@@ -247,6 +247,8 @@ main {
 
 .searchName {
 	width: 18vmax;
+	display: flex;
+	gap: 5%;
 }
 
 .searchTemp {
@@ -593,7 +595,7 @@ footer a:visited {
 footer a svg {
 	width: 6vmin;
 	height: 6vmin;
-	margin: 0 0 0 5vmin;
+	margin: 0 0 0 0;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -766,6 +768,8 @@ footer a svg {
 	.top {
 		width: 100%;
 		grid-template-columns: 100%;
+		gap: 5%;
+		margin-bottom: 5%;
 	}
 
 	#pos {
@@ -795,10 +799,13 @@ footer a svg {
 
 	.bottom {
 		grid-template-columns: 100%;
+		margin-bottom: 5%;
 	}
 
 	.bottomHeader {
 		font-size: 8vw;
+		text-align: center;
+		height: max-content;
 	}
 
 	#chartsDisplay input[type="radio"] {
@@ -871,6 +878,11 @@ footer a svg {
 
 	#dayDetails {
 		width: 100%;
+	}
+
+	.svgLink,
+	footer a svg {
+		margin: 0;
 	}
 }
 
@@ -1034,5 +1046,6 @@ html {
 	background-color: "rgb(100; 100; 100)";
 }
 
+@tailwind base;
 @tailwind components;
 @tailwind utilities;

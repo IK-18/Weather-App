@@ -6,11 +6,11 @@ import {ReactComponent as WhatsApp} from "../assets/svg/whatsapp.svg";
 
 function Footer() {
 	return (
-		<footer className='flex h-[15vh] w-[screen] max-w-[100vw] box-border px-[5%] items-center justify-between bg-[#374d53]'>
-			<p className="whitespace-nowrap text-[14px] font-medium leading-[20px] tracking-[0] text-[#ffffff] [font-family:'General_Sans-Medium',Helvetica]">
+		<footer className='flex h-[15vh] max-md:h-max max-md:max-w-screen max-md:flex-col max-w-[100vw] !box-border items-center justify-between bg-[#374d53]'>
+			<p className="whitespace-nowrap text-[2vmax] font-medium leading-[3vmax] tracking-[0] text-[#ffffff] [font-family:'General_Sans-Medium',Helvetica]">
 				© 2023 Weather4U - All Rights Reserved
 			</p>
-			<div>
+			<div className='w-[40%] flex justify-between items-center'>
 				<a className='svgLink' href='https://github.com/IK-18'>
 					<Github />
 				</a>

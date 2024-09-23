@@ -93,15 +93,15 @@ const Weather = () => {
 	};
 	const geoResults = async (event) => {
 		event.preventDefault();
-		invalidCity.current.style.display = "none";
 		if (!searchBar.current.value) {
-			invalidCity.current.style.display = "block";
+			searchResults.current.innerHTML = "Please enter a city!";
+			searchResults.current.style.textAlign = "center";
 		} else {
 			try {
 				results = [];
 				let city = searchBar.current.value;
 				event.preventDefault();
-				invalidCity.current.style.display = "none";
+				searchResults.current.innerHTML = "";
 				loading();
 				const geo = await fetch(
 					`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=4&appid=${key}`,
@@ -180,7 +180,8 @@ const Weather = () => {
 					document.querySelector(
 						".info",
 					).style.borderBottomRightRadius = "0";
-					invalidCity.current.style.display = "block";
+					searchResults.current.innerHTML = "City not found!";
+					searchResults.current.style.textAlign = "center";
 				}
 			} catch (error) {
 				throw error;
@@ -475,6 +476,12 @@ const Weather = () => {
 		let descriptionText;
 		let description;
 		let daysItems;
+		forecastList.current.innerHTML = "";
+		forecastList.current.innerHTML =
+			'<div style="height: 20vh; width: 20vh;" class="loading"></div>';
+		forecastList.current.style.alignItems = "center";
+		forecastList.current.style.justifyContent = "center";
+		forecastList.current.style.height = "60vh";
 		for (let member of forecastArray) {
 			member.remove();
 		}
@@ -699,6 +706,9 @@ const Weather = () => {
 			day5.data.push({date: dateTime, Temp: days[i].main.temp});
 		}
 		daysList = [day1, day2, day3, day4, day5];
+		forecastList.current.innerHTML = "";
+		forecastList.current.style.height = "max-content";
+		forecastList.current.style.justifyContent = "unset";
 		for (let i = 0; i < daysList.length; i++) {
 			daysList[i].max = Math.max(...daysList[i].temp);
 			daysList[i].min = Math.min(...daysList[i].temp);
@@ -1050,6 +1060,11 @@ const Weather = () => {
 		let day4;
 		let day5;
 		forecastList.current.innerHTML = "";
+		forecastList.current.innerHTML =
+			'<div style="height: 20vh; width: 20vh;" class="loading"></div>';
+		forecastList.current.style.alignItems = "center";
+		forecastList.current.style.justifyContent = "center";
+		forecastList.current.style.height = "60vh";
 		dayCont.current.style.display = "none";
 		forecastChartCont.current.style.display = "none";
 		forecastList.current.dataset.activeday = "0";
@@ -1279,6 +1294,9 @@ const Weather = () => {
 			day5.data.push({date: dateTime, Temp: days[i].main.temp});
 		}
 		daysList = [day1, day2, day3, day4, day5];
+		forecastList.current.innerHTML = "";
+		forecastList.current.style.height = "max-content";
+		forecastList.current.style.justifyContent = "unset";
 		for (let i = 0; i < daysList.length; i++) {
 			daysList[i].max = Math.max(...daysList[i].temp);
 			daysList[i].min = Math.min(...daysList[i].temp);
@@ -1478,9 +1496,6 @@ const Weather = () => {
 						</button>
 					</div>
 				</form>
-				<h3 ref={invalidCity} id='invalidCity'>
-					City not found!
-				</h3>
 				<section className='weatherDisplay'>
 					<div className='top'>
 						<div className='general'>
@@ -1622,7 +1637,7 @@ const Weather = () => {
 								</div>
 								<div
 									ref={forecastChartCont}
-									className='forecastfullChartCont fullChartCont'
+									className='forecastfullChartCont fullChartCont overflow-x-scroll no-scrollbar'
 								>
 									<DayChart
 										data={dayChart}
