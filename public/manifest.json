@@ -1,9 +1,10 @@
 {
 	"short_name": "Weather4U",
+	"dir": "ltr",
 	"name": "Weather4U",
 	"icons": [
 		{
-			"src": "4052984.png",
+			"src": "/4052984.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		}
@@ -11,5 +12,9 @@
 	"start_url": ".",
 	"display": "standalone",
 	"theme_color": "#000000",
-	"background_color": "#ffffff"
+	"background_color": "#ffffff",
+	"orientation": "portrait",
+	"scope": "/",
+	"id": "weather4u",
+	"description": "Can be used to find general weather information on most cities worldwide."
 }
