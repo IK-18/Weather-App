@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.vercel.weather_app_steel_seven.twa",
+        "sha256_cert_fingerprints": ["93:2B:C8:6B:A1:DD:12:E3:41:4B:22:1D:3A:22:A5:0A:05:31:3D:79:96:CF:37:7E:BE:48:C2:BE:04:7C:3A:36"]
+      }
+    }]
